@@ -31,6 +31,7 @@ const HEARTBEAT: &'static str =
 //
 //Errors that happen while connecting
 //
+#[derive(Debug)]
 pub enum Conn {
     OpenSSL(::openssl::ssl::error::SslError),
     Connection(::websocket::result::WebSocketError),
